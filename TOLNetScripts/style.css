@@ -1,0 +1,183 @@
+/* LAST UPDATED JULY 2019 */
+
+body{
+	font: 12px sans-serif;
+	margin: 0px;
+	background-color: #272626;
+	
+
+}
+
+.grid .tick{
+	stroke: #3d3d3d;
+	opacity: 1;
+}
+.grid path{
+	stroke-width:0;
+}
+
+.container{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display:flex;
+
+}
+
+.controls-meta{
+	margin-top: 2%;
+	margin-right: 2%;
+	min-width: 15vw;
+	display: inline-block;
+	overflow-y: auto;
+	flex: 2;
+}
+
+.check-box{
+	margin-right: 2%;
+	margin-top: 2%;
+	color: #ded4ca;
+}
+
+#metaDataTitle{
+	margin-top: 2%;
+	margin-right: 2%;
+	color: #ded4ca;
+	font: 16px;
+}
+#metaData{
+	margin-top: 2%;
+	color: #ded4ca;
+}
+
+#dataset-picker{
+	margin-top: 2%;
+	margin-left: 2%;
+	margin-bottom: 2%;
+	flex: 0 0 200px;
+	overflow-y: auto;
+}
+
+#plot{
+	flex: 1;	
+	z-index: 1;
+	min-width: 60vw;
+}
+
+@media only screen and (orientation: portrait){
+	.container{
+		flex-wrap: wrap;
+	}
+	#plot{
+		flex-basis: 100%;
+		order: 1;
+		z-index: 1;
+	}
+}
+
+
+.axis path, .axis line, .axis text {
+	fill: none;
+	stroke: #6f7e8e /*#546a75*/;
+	shape-rendering: crispEdges;
+	
+}
+
+.axis .grid-line{
+	fill: none;
+	stroke: #3d3d3d;
+
+}
+
+.line{
+	fill: none;
+	stroke: #e57955 /*#6f7e8e*/;
+	stroke-width: 2px;
+}
+
+.dataset-button{
+	display: inline-block;
+	margin: 3px;
+	background-color: #3d3d3d;
+	border: #272626;
+	border-radius: 2px;
+	text-align: center;
+	color: #ded4ca /* #f9f5ec #6f7e8e*/;
+	font-size: 12px;
+	width: 175px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+.dataset-button:hover,
+.dataset-button:focus{
+	color: #e57955;
+	cursor: pointer;
+}
+
+.modal{
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	left: 5vw;
+	top: 0;
+	width: 90%;
+	height: 100%;
+	overflow: auto;
+	background-color: #272626;
+}
+
+.modal-content{
+	background-color: #272626;
+	margin: 0% auto;
+	width:100%;
+}
+.close{
+	color: #aaa;
+	float: right;
+	margin: 2%;
+	font-size: 28px;
+	font-weight: bold;
+}
+.close:hover,
+.close:focus{
+	color:#000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-overlay{
+	display:none;
+	position:fixed;
+	z-index: 9990;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(61,61,61,0.6);
+}
+
+.error-line{
+	stroke: #356b79;
+	stroke-dasharray: 2, 2;
+}
+
+.error-cap{
+	stroke: #356b79;
+	stroke-width: 2px;
+	stroke-type: solid;
+}
+
+
+
+
+html {
+	background-color: #272626;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+}
