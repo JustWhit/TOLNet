@@ -1,0 +1,39 @@
+<!-- last updated July 2019 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>TOLNet Plot View</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://d3js.org/d3.v3.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.js"></script>
+		<link rel="SHORTCUT ICON" type="image/x-icon" href="favicon.ico">
+		<link rel="stylesheet" href='style.css'>
+		<div id="inModal" class="modal">
+			<div class="modal-content">
+				<span id="close" class = "close">&times;</span>
+			</div>
+			<div id="modal-plot" style="text-align:center"></div>
+		</div>
+		<div id="modal-overlay" class="modal-overlay"></div>
+	</head>
+	<body>
+		<section class="container">
+			<div id="dataset-picker"></div>
+			<div id="plot" style="text-align:center"></div>
+			<div class="controls-meta">
+				<div role = "toggleError" class = "check-box">
+					<div>
+						<input type="checkbox" id='Box' name='Box' />
+						<label>Profile Error</label>
+					</div>
+				</div>
+				<div id="metaDataTitle" style="text-align: center">Meta Data</div>
+				<div id="metaData" style="text-align: left">...</div>
+			</div>
+		</section>
+	    <script src="plotPlot2.js"></script>
+	</body>
+</html>
